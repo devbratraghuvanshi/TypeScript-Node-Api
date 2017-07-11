@@ -13,6 +13,7 @@ export class MovieRouter {
   }
 
   init() {
+    this.router.get('/AddToDB', this.controller.AddAllMoviesToMongoDB);// this is to add the data in mongo db
     this.router.get('/', this.controller.getAllMovies);
     this.router.get('/:id', this.controller.getById);
   }
